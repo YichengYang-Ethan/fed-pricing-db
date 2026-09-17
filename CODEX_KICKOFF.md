@@ -56,10 +56,9 @@ published, for licensing reasons stated in §6 of `HANDOFF.md`.
 
 ## Off limits
 
-**Do not read, open, summarise, copy or transmit `~/Developer/fed-pricing-db/raw/s3scout/`.**
-It is reconnaissance of a private employer S3 bucket and contains internal infrastructure
-details. It is unrelated to this project's data and is excluded from every task below. If a
-glob or a recursive tool would pull it in, narrow the glob.
+**Read only the paths listed above.** Other subdirectories of `raw/` hold unrelated scratch
+material from other work and are out of scope for every task below. If a glob or a recursive
+tool would pull them in, narrow the glob.
 
 Also do not commit or publish anything from `raw/` or `fed.duckdb`. Republishing CME settlement
 prices is redistribution under Databento's licence and would create a real obligation; see §6

@@ -93,9 +93,6 @@ Raw inputs live under `raw/<source>/` (parquet + JSON manifests written by the c
   The public trades endpoint only serves a trailing window: earliest trade 2026-07-11, complete for the Sep-2026 window but missing 17-43%
   of the Jul-2026 legs' volume (per-market coverage in `raw/kalshi/manifest.json -> trade_coverage`); use candle `vol` for full-life volume.
   Open markets have in-progress bars flagged `is_partial`. Settlements: 26JUL H0=yes (2026-07-29T18:07Z), 26SEP H25=yes (2026-09-16T18:08Z).
-* **A private L2 order-book archive** was scouted, not loaded: it covers 2026-04-07 onward (571 GB) but
-  contains **zero KXFEDDECISION rows** (the recorder's universe cap excludes the series); see `raw/s3scout/findings.json`. Nothing in this DB
-  comes from S3.
 * **Polymarket** (Gamma + CLOB prices-history), pulled 2026-09-17. 55 events / 249 markets from 2022-03 to 2027-01; the 7 events of 2022 are
   AMM-era (no CLOB history, metadata only), so prices start 2022-12-15. Hourly = fidelity 60 for the whole life; minute = fidelity 1 for the
   45 days before the effective end. Known quirks kept raw: 0.5 placeholders on empty books, post-resolution tails for 2023 events (trimmed in
