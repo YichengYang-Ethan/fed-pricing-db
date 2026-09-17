@@ -6,3 +6,4 @@ raw/
 __pycache__/
 *.pyc
 build_report.json
+raw/_parts/
