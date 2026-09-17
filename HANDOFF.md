@@ -48,8 +48,9 @@ Selection rule, a pure function of the FOMC calendar with no price input:
 - `w = 0` (meeting on the last day of the month) is not degenerate: the whole decision lands
   in M+1 and FRONT has span 1.0.
 - FRONT and BACK are complementary, because `w` is large exactly when a meeting falls early in
-  its month, which is exactly when the previous month is clean. Together they cover 37 of 49
-  meetings; FRONT alone covers 23.
+  its month, which is exactly when the previous month is clean. Over the 49 meetings in the
+  calendar, FRONT is eligible on 27 and BACK on 23, and together they give 45 a viable
+  instrument; 4 have neither because both neighbouring months carry another decision.
 
 ### Sizing and the trade
 
@@ -138,7 +139,7 @@ bars = ib.reqHistoricalData(c, endDateTime=end, durationStr="2 Y",
 ```
 
 Gateway/TWS ports tried in order: 4002, 7497, 4001, 7496. Enable "Read-Only API".
-Cross-validated against Databento on 8,795 overlapping daily settlements: **100% exact, zero
+Cross-validated against Databento on 8,607 overlapping daily settlements: **100% exact, zero
 disagreement to the last decimal.**
 
 ### 2.3 Polymarket — public, no auth
