@@ -1,5 +1,9 @@
 # fed-pricing-db
 
+> Builds the panel analysed in [fed-basis-backtest](https://github.com/YichengYang-Ethan/fed-basis-backtest). Code only:
+> `raw/`, `*.duckdb` and `*.parquet` are gitignored, because republishing CME settlements is
+> redistribution under Databento's licence and Kalshi's terms prohibit it outright.
+
 One DuckDB file (`fed.duckdb`) that lines up three venues pricing the same FOMC decisions:
 
 * **Kalshi** KXFEDDECISION ladders (C26/C25/H0/H25/H26 legs -> CUT50P/CUT25/HOLD/HIKE25/HIKE50P), candles + trades + market metadata,
