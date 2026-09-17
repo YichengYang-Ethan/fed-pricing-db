@@ -1,0 +1,8 @@
+raw/
+*.duckdb
+*.parquet
+*.jsonl*
+
+__pycache__/
+*.pyc
+build_report.json
